@@ -1,0 +1,39 @@
+
+{% extends 'base.html'%}
+
+{% block content%}
+
+    <table class="table-fixed border-spacing-px" style="width:50%; margin:auto;">
+        <thead>
+            <tr>
+                <th>Book Id</th>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Firt Pub.</th>
+                <th>Last Pub. </th>
+                <th>Actions</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            {% for book in books %}
+                <tr>
+                    <td>{{book.book_name}}</td>
+                    <td>{{book.author}}</td>
+                    <td>{{book.category}}</td>
+                    <td>{{book.id}}</td>
+                    <td>{{book.first_pub}}</td>
+                    <td>{{book.last_pub}}</td>
+                    <td><a href="google.com">Delete</a></td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+   
+
+{% endblock %}
