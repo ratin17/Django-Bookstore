@@ -4,6 +4,7 @@
 {% block content%}
 
    <div style="width:50%; margin:auto;">
+    
         <form method="POST">
             {% csrf_token %}
             {{form.as_p}}
